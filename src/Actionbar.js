@@ -18,7 +18,7 @@ export default class Actionbar extends React.Component {
 						onClick = { () => { this.props.onSubmit(this.props.arrayQuestions) }}
 						visible = { false }></Button>
 				<Button value = {"Reset"}
-						onClick = { () => { 
+						 onClick = { () => { 
 							$.ajax({
        						  url: "https://quiz2019.herokuapp.com/api/quizzes/random10wa?token=c87faa80f2177717349b",
 
@@ -30,6 +30,8 @@ export default class Actionbar extends React.Component {
      						this.timeOut = setTimeout(() => {
         						this.props.onSubmit(this.props.arrayQuestions)}, 60000);
      						 }}
+     					
+     						 
      					visible = { false }>	
      						</Button>			 	
 			</div>	

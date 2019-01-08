@@ -6,9 +6,17 @@ function score(state = 0, action = {}) {
 	switch(action.type){
 		case SUBMIT:
 		var aciertos = 0;
-				return action.payload.questions.map((question, i) => {
+				for (var i = 0; i<action.payload.questions.length; i++) {
+					if (action.payload.questions[i].answer == action.payload.questions[i].userAnswer){
+						aciertos++;
+					}
+				}
+				/*
+				let preguntas = action.payload.questions.map((question, i) => {
 					return action.payload.questions[i].answer === action.payload.questions[i].userAnswer ? aciertos + 1 : aciertos;
-				})
+				
+				}) 
+				*/
 			return aciertos;	
 		default:
 		  	return state;

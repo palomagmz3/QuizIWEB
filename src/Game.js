@@ -15,7 +15,7 @@ export default class Game extends React.Component {
 						 score = { this.props.score }
 						 finished = { this.props.finished }/>
 				<Actionbar question = { this.props.question }
-						   arrayQuestions = { this.props.questions }
+						   arrayQuestions = { this.props.arrayQuestions }
 						   currentQuestion = { this.props.currentQuestion }
 						   nQuestions = { this.props.nQuestions }
 						   onChangeQuestion = { this.props.onChangeQuestion }
